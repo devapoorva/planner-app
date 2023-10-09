@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+        setTitle("Login to Planner App");
         db=new DatabaseHelper(this);
         e1=findViewById(R.id.emaillogin);
         e2=findViewById(R.id.passlogin); b1=findViewById(R.id.login);

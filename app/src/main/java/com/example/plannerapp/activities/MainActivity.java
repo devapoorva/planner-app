@@ -48,4 +48,14 @@ public class MainActivity extends AppCompatActivity {
         inf.inflate(R.menu.app_menu,m);
         return true;
     }
+
+    public void ker(View view) {
+        Intent in = new Intent(this,BangloreActivity.class);
+        startActivity(in);
+    }
+
+    public void mum(View view) {
+        Intent in = new Intent(this,BangloreActivity.class);
+        startActivity(in);
+    }
 }

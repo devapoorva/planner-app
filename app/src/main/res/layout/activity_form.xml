@@ -1,123 +1,63 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView
+<RelativeLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-    <TableLayout
+    android:layout_height="match_parent"
+    android:padding="16dp">
+
+    <EditText
+        android:id="@+id/name"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
-        <TableRow
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content">
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_span="2"
-                android:text="HOME TOUR"
-                android:layout_gravity="center"
-                android:textSize="30dp"
-                android:textColor="@android:color/black"/>
-        </TableRow>
-        <TableRow
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content">
-            <ImageView android:layout_width="200dp"
-                android:layout_height="150dp"
-            android:onClick="form"
-            android:src="@drawable/glasshouse"/>
-        <TextView
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content"
-            android:text=" Glass House \n Loc : 41kms from \n airport \n Timings:\n 9am -7pm"
-            android:paddingTop="30dp"
-            android:textSize="15dp"
-            android:textColor="@android:color/black"/>
-        </TableRow>
+        android:layout_height="wrap_content"
+        android:hint="Name" />
 
-        <TableRow
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content">
-            <ImageView
-                    android:layout_width="200dp"
-                android:layout_height="150dp"
-                android:onClick="form"
-                android:src="@drawable/isckon"/>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text=" Isckon \n Loc : Rajajinagar \n Timings:\n 8am - 8pm "
-                android:paddingTop="30dp"
-                android:textSize="15dp"
-                android:textColor="@android:color/black"/>
-        </TableRow>
+    <EditText
+        android:id="@+id/mobileno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name"
+        android:layout_marginTop="16dp"
+        android:hint="Mobile Number" />
 
-        <TableRow
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content">
-                <ImageView
-                    android:layout_width="200dp"
-                    android:layout_height="150dp"
-                    android:onClick="form"
-                    android:src="@drawable/ubcity"/>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text=" UB City \n Loc : 53kms from \n airport \n Timings:\n 11am - 9pm "
-                android:paddingTop="30dp"
-                android:textSize="15dp"
-                android:textColor="@android:color/black"/>
-        </TableRow>
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mobileno"
+        android:layout_marginTop="16dp"
+        android:hint="Email" />
 
-        <TableRow
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content">
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="150dp"
-                android:onClick="form"
-                android:src="@drawable/highcourt"/>
+    <EditText
+        android:id="@+id/source"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/email"
+        android:layout_marginTop="16dp"
+        android:hint="Source" />
 
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text=" High Court \n Loc : 28kms from \n airport \n Timings:\n 7am - 8pm " android:paddingTop="30dp"
-                android:textSize="15dp"
-                android:textColor="@android:color/black"/>
-        </TableRow>
-        <TableRow
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content">
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="150dp"
-                android:onClick="form"
-                android:src="@drawable/nandhihill"/>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text=" Nandhi Hills \n Loc : 35kms from \n airport \n Timings:\n 8am"
-                android:paddingTop="30dp"
-                android:textSize="15dp"
-                android:textColor="@android:color/black"/>
-        </TableRow>
+    <EditText
+        android:id="@+id/destination"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/source"
+        android:layout_marginTop="16dp"
+        android:hint="Destination" />
+    <EditText
+        android:id="@+id/noofperson"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/destination"
+        android:layout_marginTop="16dp"
+        android:hint="Number of Persons" />
 
-        <TableRow
-            android:layout_height="wrap_content"
-            android:layout_width="wrap_content">
-            <ImageView
-                android:layout_width="200dp"
-                android:layout_height="150dp"
-                android:onClick="form"
-                android:src="@drawable/shiva"/>
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text=" Shiva Temple \n Loc : 28kms from \n airport \n Timings:\n 5am -8pm "
-                android:paddingTop="30dp"
-                android:textSize="15dp"
-                android:textColor="@android:color/black"/>
-        </TableRow>
-    </TableLayout>
-</ScrollView>
+
+    <Button
+        android:id="@+id/btnsubmit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/noofperson"
+        android:layout_marginTop="16dp"
+        android:text="Submit"
+        android:onClick="submit" />
+
+</RelativeLayout>
