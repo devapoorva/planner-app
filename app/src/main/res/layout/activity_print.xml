@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Current Location"
+        android:textSize="45dp"
+        android:id="@+id/txtheader"
+        android:textColor="@android:color/white">
+
+    </TextView>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtaddress"
+        android:layout_below="@+id/txtheader"
+        android:textSize="20dp"
+        android:textColor="@android:color/white">
+
+    </TextView>
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtaddress"
+        android:id="@+id/btnlocation"
+        android:text="DISPLAY LOCATION"
+        android:textColor="@android:color/black"
+        android:layout_centerHorizontal="true"
+        android:onClick="printlocation"
+        android:background="@android:color/white">
+
+    </Button>
+</RelativeLayout>
+

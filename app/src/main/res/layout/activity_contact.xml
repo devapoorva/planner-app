@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/txthead"
+        android:text="Contact Us"
+        android:textColor="@android:color/black"
+        android:paddingTop="50dp"
+        android:textSize="35dp"
+        android:layout_centerHorizontal="true">
+
+    </TextView>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="5dp"
+        android:background="@android:color/black"
+        android:layout_below="@+id/txthead" />
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtnum"
+        android:layout_marginTop="30dp"
+        android:hint="Mobile Number"
+        android:layout_below="@+id/txthead"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edtmsg"
+        android:layout_below="@+id/edtnum"
+        android:hint="Your Concerns"
+        android:inputType="textMultiLine"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnsend"
+        android:text="Send"
+        android:layout_marginTop="30dp"
+        android:layout_below="@id/edtmsg"
+        android:onClick="sendsms"/>
+</RelativeLayout>

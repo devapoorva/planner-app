@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto" xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent" android:layout_height="match_parent" android:background="@drawable/lbg"
+    >
+    <TableLayout android:layout_width="match_parent" android:layout_height="match_parent">
+        <TableRow android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:layout_span="2" android:text="DINING" android:layout_gravity="center" android:textSize="30dp"
+                android:textColor="@android:color/white"></TextView>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:layout_width="200dp" android:layout_height="150dp" android:onClick="form"
+                android:src="@drawable/onlybcafe"></ImageView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:text="The Only Cafe \n Loc : Museum Road \n Shantala \n Approx : Rs.2500\n cost of two "
+                android:paddingTop="30dp" android:textSize="15dp"
+                android:textColor="@android:color/white">
+            </TextView>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:layout_width="200dp" android:layout_height="150dp" android:onClick="form" android:src="@drawable/dyubcafe"
+                ></ImageView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:text="Dyu Art Cafe \n Loc : MIC Colony \n Kormangala \n Approx : Rs.1200\n cost of two"
+                android:paddingTop="30dp" android:textSize="15dp" android:textColor="@android:color/white">
+            </TextView>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:layout_width="200dp" android:layout_height="150dp" android:src="@drawable/ombcafe" android:onClick="form" android:paddingTop="10dp"
+                ></ImageView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:text="Om Made Cafe \n Loc : Taj Lands End \n Kormangala \n Approx : Rs.4000 \n cost of two "
+                android:paddingTop="30dp" android:textSize="15dp" android:textColor="@android:color/white">
+            </TextView>
+        </TableRow>
+        <TableRow android:layout_height="wrap_content"
+            android:layout_width="wrap_content">
+            <ImageView android:layout_width="200dp" android:layout_height="150dp" android:onClick="form" android:src="@drawable/freshbcafe">
+            </ImageView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:text="Fresh Paresso Cafe \n Loc : The Fersh Paresso \n Lavelle Road \n Approx : Rs.2500 \n cost of two "
+                android:paddingTop="30dp" android:textSize="15dp" android:textColor="@android:color/white">
+            </TextView></TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:layout_width="200dp" android:layout_height="150dp" android:onClick="form" android:src="@drawable/alleybcafe"
+                ></ImageView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:text="Alley Cafe \n Loc : D'souza Nagar \n Banshankari \n Approx : Rs.2300 \n cost of two "
+                android:paddingTop="30dp" android:textSize="15dp" android:textColor="@android:color/white">
+            </TextView></TableRow>
+        <TableRow android:layout_height="wrap_content" android:layout_width="wrap_content">
+            <ImageView android:layout_width="200dp" android:layout_height="150dp" android:onClick="form" android:src="@drawable/whitebcafe"
+                ></ImageView>
+            <TextView
+                android:layout_height="wrap_content" android:layout_width="wrap_content"
+                android:text="White Room Cafe \n Loc : Highgates road \n Chruch Street \n Approx : Rs.2400\n cost of two "
+                android:paddingTop="30dp" android:textSize="15dp" android:textColor="@android:color/white">
+            </TextView></TableRow>
+    </TableLayout>
+</ScrollView>
+
+

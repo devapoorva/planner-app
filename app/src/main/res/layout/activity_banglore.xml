@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/lbg"
+    android:orientation="vertical">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="EXPLORE"
+                android:textAlignment="center"
+                android:textSize="45dp"
+                android:textColor="@android:color/black">
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/location"
+                android:onClick="places"
+                android:layout_gravity="center"
+                android:alpha=".78">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Places to visit"
+                android:layout_gravity="center"
+                android:textSize="40dp"
+                android:fontFamily="cursive"
+                android:textColor="@android:color/black">
+
+            </TextView>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/hotel"
+                android:onClick="hotels"
+                android:layout_gravity="center"
+                android:alpha=".78">
+
+            </ImageView>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hotel"
+                android:layout_gravity="center"
+                android:textSize="40dp" android:fontFamily="cursive"
+                android:textColor="@android:color/black">
+
+            </TextView>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/res"
+                android:layout_gravity="center"
+                android:onClick="dining"
+                android:alpha=".78">
+            </ImageView>
+            <TextView android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dining" android:layout_gravity="center"
+                android:textSize="40dp" android:fontFamily="cursive"
+                android:textColor="@android:color/black">
+            </TextView>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+

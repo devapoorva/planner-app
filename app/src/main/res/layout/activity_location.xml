@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/txtaddress"
+        android:textSize="20dp"
+        android:textColor="@android:color/black">
+
+    </TextView>
+    <Button
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_below="@+id/txtaddress"
+        android:id="@+id/btnlocation" android:text="DISPLAY LOCATION" android:onClick="printlocation"></Button>
+
+</RelativeLayout>
