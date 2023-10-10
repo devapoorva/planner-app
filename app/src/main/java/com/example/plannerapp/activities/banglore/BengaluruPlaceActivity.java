@@ -1,26 +1,27 @@
-package com.example.plannerapp.activities;
+package com.example.plannerapp.activities.banglore;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import com.example.plannerapp.R;
+import com.example.plannerapp.activities.FormActivity;
 
-import java.util.Objects;
+public class BengaluruPlaceActivity extends AppCompatActivity {
 
-public class BangloreActivity extends AppCompatActivity {
     @Override
-    protected void onCreate(@Nullable Bundle savedInstanceState) {
+    protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_hotel_banglore);
-        getSupportActionBar().setTitle("Banglore");
+        setContentView(R.layout.activity_banglore_place);
+
+        getSupportActionBar().setTitle("Bengaluru Places");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
     }
 
     @Override
@@ -31,8 +32,8 @@ public class BangloreActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-
     public void form(View view) {
         startActivity(new Intent(this, FormActivity.class));
     }
+
 }

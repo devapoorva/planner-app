@@ -20,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
     public void bang(View v){
-        Intent in = new Intent(this,BangloreActivity.class);
+        Intent in = new Intent(this, BengaluruActivity.class);
         startActivity(in);
     }
 
@@ -50,12 +50,12 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void ker(View view) {
-        Intent in = new Intent(this,BangloreActivity.class);
+        Intent in = new Intent(this, BengaluruActivity.class);
         startActivity(in);
     }
 
     public void mum(View view) {
-        Intent in = new Intent(this,BangloreActivity.class);
+        Intent in = new Intent(this, BengaluruActivity.class);
         startActivity(in);
     }
 }
