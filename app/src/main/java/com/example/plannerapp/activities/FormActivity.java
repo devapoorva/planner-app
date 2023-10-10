@@ -13,16 +13,20 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.plannerapp.R;
+import com.example.plannerapp.database.DatabaseHelper;
 
 public class FormActivity extends AppCompatActivity {
+    private DatabaseHelper databaseHelper;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_form);
+        databaseHelper = new DatabaseHelper(this);
         getSupportActionBar().setTitle("App Form");
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
+
 
     }
 

@@ -8,6 +8,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 import androidx.annotation.Nullable;
 
+import com.example.plannerapp.dto.ApplicationForm;
 import com.example.plannerapp.dto.User;
 
 import java.util.ArrayList;
@@ -32,10 +33,11 @@ public class DatabaseHelper extends SQLiteOpenHelper
                 "name TEXT NOT NULL," +
                 "mobile TEXT NOT NULL UNIQUE," +
                 "source TEXT NOT NULL," +
+                "persons TEXT NOT NULL," +
                 "destination TEXT NOT NULL," +
                 "email TEXT UNIQUE NOT NULL," +
-                "startDate TEXT UNIQUE NOT NULL," +
-                "endDate TEXT UNIQUE NOT NULL)");
+                "start_date TEXT UNIQUE NOT NULL," +
+                "end_date TEXT UNIQUE NOT NULL)");
     }
 
     @Override
@@ -55,6 +57,21 @@ public class DatabaseHelper extends SQLiteOpenHelper
         return ins != -1;
     }
 
+    public boolean insertApplication(ApplicationForm applicationForm){
+        SQLiteDatabase db=this.getWritableDatabase();
+        ContentValues contentValues=new ContentValues();
+        contentValues.put("name",applicationForm.getName());
+        contentValues.put("email",applicationForm.getEmail());
+        contentValues.put("mobile",applicationForm.getMobileNumber());
+        contentValues.put("source",applicationForm.getSource());
+        contentValues.put("destination",applicationForm.getDestination());
+        contentValues.put("persons",applicationForm.getNumberOfPerson());
+        contentValues.put("start_date",applicationForm.getStartDate());
+        contentValues.put("end_date",applicationForm.getEndDate());
+        long ins=db.insert("applications", null,contentValues);
+        return ins != -1;
+    }
+
     public List<User> allUsers(){
         SQLiteDatabase db = this.getReadableDatabase();
         List<User> users = new ArrayList<>();
@@ -71,6 +88,29 @@ public class DatabaseHelper extends SQLiteOpenHelper
             }
         }
         return users;
+    }
+
+    public List<ApplicationForm> allApplications(){
+        SQLiteDatabase db = this.getReadableDatabase();
+        List<ApplicationForm> applicationForms = new ArrayList<>();
+        Cursor cursor = db.rawQuery("select * from applications",null);
+        if(cursor.moveToFirst()){
+            while (!cursor.isAfterLast()){
+                ApplicationForm applicationForm = new ApplicationForm(
+                        cursor.getString(cursor.getColumnIndexOrThrow("name")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("mobile")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("email")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("source")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("destination")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("persons")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("start_date")),
+                        cursor.getString(cursor.getColumnIndexOrThrow("end_date"))
+                );
+                applicationForms.add(applicationForm);
+                cursor.moveToNext();
+            }
+        }
+        return applicationForms;
     }
 
     public Boolean isUserExist(String email)

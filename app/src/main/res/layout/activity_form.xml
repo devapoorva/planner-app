@@ -43,7 +43,7 @@
         android:layout_marginTop="16dp"
         android:hint="Destination" />
     <EditText
-        android:id="@+id/noofperson"
+        android:id="@+id/edtPerson"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/destination"
@@ -52,10 +52,10 @@
 
 
     <Button
-        android:id="@+id/btnsubmit"
+        android:id="@+id/btnSubmit"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/noofperson"
+        android:layout_below="@+id/edtPerson"
         android:layout_marginTop="16dp"
         android:text="Submit"
         android:onClick="submit" />
