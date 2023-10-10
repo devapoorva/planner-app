@@ -10,6 +10,9 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.plannerapp.R;
+import com.example.plannerapp.activities.users.UserActivity;
+import com.example.plannerapp.data.AppData;
+import com.example.plannerapp.util.AppUtil;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,10 +44,20 @@ public class MainActivity extends AppCompatActivity {
             Intent intent1=new Intent(this, LocationActivity.class);
             startActivity(intent1);
         }
+        if(id==R.id.users){
+            startActivity(new Intent(this, UserActivity.class));
+        }
+        if(id==R.id.logout){
+            AppData.getAppData(this).logout();
+            AppUtil.showToast(getApplicationContext(),"Logout Successful");
+            startActivity(new Intent(this, LoginActivity.class));
+            finish();
+        }
         return true;
     }
     public boolean onCreateOptionsMenu(Menu m)
-    { MenuInflater inf=getMenuInflater();
+    {
+        MenuInflater inf=getMenuInflater();
         inf.inflate(R.menu.app_menu,m);
         return true;
     }

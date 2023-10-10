@@ -1,92 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/lbg"
+    android:orientation="vertical"
     tools:context=".activities.RegisterActivity">
 
-    <Button
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@android:color/holo_red_dark"
-        android:text="Register"
-        android:textSize="20dp"
-        android:paddingLeft="20dp"
-        android:paddingRight="20dp"
-        android:textColor="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.754" />
-
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="291dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="E-Mail"
-        android:importantForAutofill="no"
-        android:inputType="textEmailAddress"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.378" />
-
-    <EditText
-        android:id="@+id/pass"
-        android:layout_width="291dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="Password"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/cpass"
-        android:layout_width="291dp"
-        android:layout_height="49dp"
-        android:ems="10"
-        android:hint="Confirm Password"
-        android:importantForAutofill="no"
-        android:inputType="textPassword"
-        android:textColor="@android:color/white"
-        android:textColorHint="@android:color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.624" />
-
-    <TextView
-        android:id="@+id/logintv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:clickable="true"
-        android:focusable="true"
-        android:text="Already Registered Click here to Login"
-        android:textColor="@android:color/white"
-        android:textSize="14sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.888" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -101,4 +23,85 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.0"
         app:srcCompat="@drawable/logo" />
-</androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        app:cardBackgroundColor="#00000000"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <EditText
+                android:id="@+id/regEdtName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="30dp"
+                android:background="@drawable/edit_field_rounded"
+                android:ems="10"
+                android:hint="Name"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:padding="10dp"
+                android:textColor="@android:color/black" />
+
+            <EditText
+                android:id="@+id/regEdtEmail"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30dp"
+                android:layout_height="wrap_content"
+                android:ems="10"
+                android:hint="E-Mail"
+                android:layout_marginTop="10dp"
+                android:importantForAutofill="no"
+                android:inputType="textEmailAddress"
+                android:padding="10dp"
+                android:textColor="@android:color/black"
+                android:background="@drawable/edit_field_rounded"
+                android:textColorHint="@android:color/black"  />
+
+            <EditText
+                android:id="@+id/regEdtPassword"
+                android:layout_width="match_parent"
+                android:layout_marginHorizontal="30dp"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:ems="10"
+                android:hint="Password"
+                android:layout_marginTop="10dp"
+                android:importantForAutofill="no"
+                android:background="@drawable/edit_field_rounded"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:layout_marginBottom="10dp"
+                android:textColorHint="@android:color/black" />
+            <Button
+                android:id="@+id/btnRegister"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/holo_red_dark"
+                android:paddingLeft="20dp"
+                android:layout_marginHorizontal="40dp"
+                android:paddingRight="20dp"
+                android:text="Register"
+                android:textColor="@android:color/white"
+                android:textSize="20dp" />
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <TextView
+        android:id="@+id/tvLogin"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginTop="20dp"
+        android:focusable="true"
+        android:textStyle="bold"
+        android:text="Already Registered Click here to Login"
+        android:textColor="@android:color/black"
+        android:textSize="20sp"
+        android:textAlignment="viewEnd"/>
+
+</LinearLayout>

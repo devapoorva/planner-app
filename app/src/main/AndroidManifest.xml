@@ -28,6 +28,8 @@
         <activity
             android:name=".activities.banglore.BengaluruDiningActivity"
             android:exported="false" />
+        <activity android:name=".activities.users.UserActivity"
+            android:exported="false"/>
         <activity
             android:name=".activities.banglore.BengaluruHotelActivity"
             android:exported="false" />
