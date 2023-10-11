@@ -25,6 +25,8 @@
         <activity
             android:name=".activities.banglore.BengaluruPlaceActivity"
             android:exported="false" />
+        <activity android:name=".activities.application.ApplicationActivity"
+            android:exported="false"/>
         <activity
             android:name=".activities.banglore.BengaluruDiningActivity"
             android:exported="false" />

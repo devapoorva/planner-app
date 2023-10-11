@@ -10,6 +10,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import com.example.plannerapp.R;
+import com.example.plannerapp.activities.application.ApplicationActivity;
 import com.example.plannerapp.activities.users.UserActivity;
 import com.example.plannerapp.data.AppData;
 import com.example.plannerapp.util.AppUtil;
@@ -46,6 +47,9 @@ public class MainActivity extends AppCompatActivity {
         }
         if(id==R.id.users){
             startActivity(new Intent(this, UserActivity.class));
+        }
+        if(id==R.id.application){
+            startActivity(new Intent(this, ApplicationActivity.class));
         }
         if(id==R.id.logout){
             AppData.getAppData(this).logout();

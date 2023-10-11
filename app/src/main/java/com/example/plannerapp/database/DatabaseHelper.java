@@ -72,6 +72,20 @@ public class DatabaseHelper extends SQLiteOpenHelper
         return ins != -1;
     }
 
+    public Boolean isEmailExist(String email)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("Select * from applications where email=?",new String[]{email});
+        return cursor.getCount() > 0;
+    }
+
+    public Boolean isMobileExist(String mobile)
+    {
+        SQLiteDatabase db=this.getReadableDatabase();
+        Cursor cursor=db.rawQuery("Select * from applications where mobile=?",new String[]{mobile});
+        return cursor.getCount() > 0;
+    }
+
     public List<User> allUsers(){
         SQLiteDatabase db = this.getReadableDatabase();
         List<User> users = new ArrayList<>();
@@ -96,6 +110,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
         Cursor cursor = db.rawQuery("select * from applications",null);
         if(cursor.moveToFirst()){
             while (!cursor.isAfterLast()){
+                int id = cursor.getInt(cursor.getColumnIndexOrThrow("id"));
                 ApplicationForm applicationForm = new ApplicationForm(
                         cursor.getString(cursor.getColumnIndexOrThrow("name")),
                         cursor.getString(cursor.getColumnIndexOrThrow("mobile")),
@@ -106,6 +121,7 @@ public class DatabaseHelper extends SQLiteOpenHelper
                         cursor.getString(cursor.getColumnIndexOrThrow("start_date")),
                         cursor.getString(cursor.getColumnIndexOrThrow("end_date"))
                 );
+                applicationForm.setId(id);
                 applicationForms.add(applicationForm);
                 cursor.moveToNext();
             }

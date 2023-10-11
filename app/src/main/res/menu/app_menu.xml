@@ -10,9 +10,13 @@
         android:id="@+id/location"
         android:title="Location" />
     <item
+        android:id="@+id/application"
+        android:title="Applications" />
+    <item
         android:id="@+id/users"
         android:title="Users" />
     <item
         android:id="@+id/logout"
         android:title="Logout" />
+
 </menu>

@@ -1,6 +1,7 @@
 package com.example.plannerapp.dto;
 
 public class ApplicationForm {
+    private int id;
     private String name;
     private String mobileNumber;
     private String email;
@@ -19,6 +20,14 @@ public class ApplicationForm {
         this.numberOfPerson = numberOfPerson;
         this.startDate = startDate;
         this.endDate = endDate;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getName() {
